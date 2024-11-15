@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="btn">Click kr</button>
+    <script>
+        document.getElementById('btn').addEventListener('click', function(){
+            confirm('are you want to confirm');
+            
+         let p= document.createElement('p');
+        p.textContent=" Ayush yad zava aahe ree";
+       
+        document.body.appendChild(p);
+        let s=new SpeechSynthesisUtterance(p.textContent);
+        
+       if(s.text.trim()){
+        for(let i=0;i<=100;i++){
+       window.speechSynthesis.speak(s);
+        }
+       }else{
+        alert("you are not able to see this");
+       }
+        })
+    </script>
+</body>
+</html>
